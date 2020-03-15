@@ -11,30 +11,52 @@ public class MaxHeap implements Heap {
     // build a heap based on data
     // to be implemented in O(nlogn)
     public void MaxHeapLogN(Integer[] data) {
-        // homework
+    	int i=0;
+    	while(i<data.length)
+    	{
+    		this.data[i]=data[i];
+    		swap(i);
+    		i++;
+    		size++;
+    	}
     }
-
+    private void swap(int i)
+    {
+    	int parent=(i-1)/2;
+    	if(this.data[i]>this.data[parent])
+    	{	 
+    		int swap=this.data[parent];
+    		this.data[parent]=this.data[i];
+    		this.data[i]=swap;
+    		swap(parent);
+    	}
+    	else 
+    	{return;}
+    }
+   
+    
+   
     // build a heap based on data
     // to be implemented in O(n)
     public void MaxHeapN(Integer[] data) {
-        // homework
+      
     }
 
     // add an item to the heap
     public boolean add(Integer item) {
-        // homework
+      
         return false;
     }
 
     // return the max item in the heap
     public Integer get() {
-        // homework
+   
         return null;
     }
 
     // remove the root item
     public Integer pop() {
-        // homework
+      
         return null;
     }
 }
